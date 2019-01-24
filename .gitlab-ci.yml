@@ -1,0 +1,18 @@
+image: node:6.1
+services:
+ - python:2.7
+
+before_script:
+  - npm install
+
+dvbcsstv-lib:
+  stage: build
+  script:
+  - grunt build
+
+dvbcsstv-lib:
+  stage: test
+  script:
+  - grunt test
+
+  

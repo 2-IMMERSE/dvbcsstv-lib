@@ -1,0 +1,32 @@
+{
+  "name": "dvbcsstv-lib",
+  "version": "0.2.0",
+  "description": "Library implementing logic to enable a browser to behave as a \"master\" for DVB CSS / HbbTV 2.0 companion synchronisation, working in conjunction with a proxy python application on the same machine that it communicates with",
+  "main": "src/js/main.js",
+  "author": {
+    "name": "British Broadcasting Corporation",
+    "url": "http://www.bbc.co.uk/rd"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-jasmine": "^1.0.3",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-webpack": "^1.0.11",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "mp4box": "^0.3.15",
+    "oipf-object-polyfill": "git+https://git@github.com:2-IMMERSE/oipf-object-polyfill.git#master",
+    "reconnectingwebsocket": "^1.0.0",
+    "weak-map": "^1.0.5"
+  },
+  "bin": {
+    "dvbcsstv-proxy-server.py": "src/python/main.py"
+  },
+  "scripts": {
+    "prepublish": "grunt build",
+    "test": "grunt test"
+  }
+}
